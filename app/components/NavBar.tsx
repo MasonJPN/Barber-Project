@@ -1,26 +1,26 @@
+import Link from "next/link"
 
+export default function NavBar() {
+  return (
+    <div className="relative flex items-center justify-between bg-black px-10 h-24">
+      
+      <div>
+        <img alt="beauBlendz logo" />
+      </div>
 
+      <ul className="absolute left-1/2 -translate-x-1/2 flex flex-row gap-10 text-white text-sm">
+        <li><Link href="/">Home</Link></li>
+        <li><Link href="/about">About Me</Link></li>
+        <li><Link href="/services">Services</Link></li>
+        <li><Link href="/contact">Contact</Link></li>
+      </ul>
 
-export default function NavBar(){
+      <div className="flex items-center">
+        <button className="w-36 h-10 text-base font-semibold rounded-full text-white bg-amber-500">
+          Book Now
+        </button>
+      </div>
 
-    return (
-        <div className="flex justify-between align-center bg-amber-300 align-center gap-12">
-            <div>
-                <img alt="beauBlendz logo"/>
-                
-            </div>
-
-
-            <div className="flex flex-row">
-                <ul className="flex flex-row justify-between align-center gap-12 px-10 py-10">
-                    <li>Home</li>
-                    <li>About Me</li>
-                    <li>Services</li>
-                    <li>
-                        <Link href="/">Contact Me</Link></li>
-                    <li>Book Now</li>
-                </ul>
-            </div>
-        </div>
-    )
+    </div>
+  )
 }

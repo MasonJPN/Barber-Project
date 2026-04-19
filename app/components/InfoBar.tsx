@@ -3,7 +3,7 @@
 
 export default function InfoBar(){
     return(
-        <div className="bg-gray-700 py-15 px-10 flex gap-20 border border-">
+        <div className=" absolute bg-gray-700 py-15 px-10 flex gap-20 border border-">
             <div className="flex flex-col align-center items-center gap-3 ">
                 <img 
                     src="/scissors.png"
