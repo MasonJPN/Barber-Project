@@ -1,96 +1,91 @@
 'use client'
-import {useState} from "react"
 
+import { useState } from "react"
 
-export default function Contact(){
-    const [firstName, setFirstName] = useState("")
-    const [lastName, setLastName] = useState("")
-    const [email, setEmail] = useState("")
-    const [message, setMessage] = useState("")
-    const [submitted, setSubmitted] = useState(false)
+export default function Contact() {
+  const [firstName, setFirstName] = useState("")
+  const [lastName, setLastName] = useState("")
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [submitted, setSubmitted] = useState(false)
+  const [phone, setPhone] = useState("")
 
-    function HandleSubmit(e:any ){
-        e.preventDefault()
+  function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
 
-        const formData = {
-            firstName,
-            lastName,
-            email,
-            message
-        }
-        setSubmitted(true)
-        console.log(formData)
+    const formData = { firstName, lastName, email, message, phone }
+    setSubmitted(true)
+    console.log(formData)
+  }
 
-    }
+  return (
+    <div className="flex items-center">
+      <div className="w-1/2 shrink-0 p-28">
+        <h1 className="text-5xl mb-10">CONTACT US</h1>
+        <p className="text-xl">
+          We'd love to hear from you! Whether you're ready to book your next haircut, have
+          questions about our services, or want to learn more about The Men's Room Barbershop,
+          we're here to help. Conveniently located in the heart of North Halsted, our
+          pride-driven barbershop and retail shop are easy to find and always welcoming.
+        </p>
+      </div>
 
-
-
-    return(
- <div className="flex justify-center items-center p-20">
-
-
-
-        {submitted ? (<h2>Your Message was Sent ! </h2>): (
-            <form 
-                onSubmit={HandleSubmit}
-                className="  border border-2-black rounded-lg w-155 h-100 flex flex-col  items-center justify-center bg-white">
-                <h2 
-                    className=" text-4xl flex  p-4">
-                    Contact Us
-                </h2>
-
-
-
-            <div className="flex items-center gap-5">
-                <label className="font-semibold text-2xl">First Name: </label>
-                <input
+      <div className="w-1/2 shrink-0 flex flex-col justify-center items-center p-20">
+        {submitted ? (
+          <h2>Your Message was Sent!</h2>
+        ) : (
+          <form
+            onSubmit={handleSubmit}
+            className="rounded- w-155 h-100 flex flex-col items-center justify-center bg-white"
+          >
+            <div className="grid grid-cols-2 items-center gap-5">
+              <input
                 value={firstName}
-                onChange={((e) => setFirstName(e.target.value))}
-                placeholder="John"
-                className="border rounded-sm h-9 w-40 px-2"
-                />
-
-
-                <label className="font-semibold text-2xl">Last Name: </label>
-                <input
+                onChange={(e) => setFirstName(e.target.value)}
+                placeholder="First Name"
+                required
+                className="border bg-gray-200 border-gray-200 h-11 w-70 px-2"
+              />
+              <input
                 value={lastName}
-                onChange={((e) => setLastName(e.target.value))}
-                placeholder="Smith"
-                className="border rounded-sm h-9 w-40 px-2"
-                />
-            </div>
-
-
-            <div className="flex flex-col">
-              <div className="flex items-center gap-5">
-                <label>Email: </label>
-                <input
+                onChange={(e) => setLastName(e.target.value)}
+                placeholder="Last Name"
+                required
+                className="border bg-gray-200 border-gray-200 h-11 w-70 px-2"
+              />
+              <input
+                type="email"
                 value={email}
-                onChange={((e) => setEmail(e.target.value))}
-                className="border rounded-sm h-9 w-40 px-2"
-                />
-             </div>
-
-                <label>Write a Message</label>
-                <textarea 
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Email"
+                required
+                className="border bg-gray-200 border-gray-200 h-11 w-70 px-2"
+              />
+              <input
+                type="tel"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                placeholder="Phone"
+                className="border bg-gray-200 border-gray-200 h-11 w-70 px-2"
+              />
+              <textarea
                 value={message}
-                onChange={((e) => setMessage(e.target.value))}
-                className="border rounded-sm resize-none px-2"
-
-                >
-                </textarea>
+                onChange={(e) => setMessage(e.target.value)}
+                placeholder="How can we help?"
+                required
+                className="col-span-2 border bg-gray-200 border-gray-200 resize-none px-2 h-20 w-150"
+              />
             </div>
 
-                <button 
-                className="bg-black text-white w-20 h-8 rounded-full"
-                type="submit"
-                >
-                 Submit
-                </button>
-            </form>
+            <button
+              type="submit"
+              className="bg-black text-white w-20 h-8 mt-6"
+            >
+              Submit
+            </button>
+          </form>
         )}
-
-
-</div>
-    )
+      </div>
+    </div>
+  )
 }

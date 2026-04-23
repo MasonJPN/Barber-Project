@@ -3,7 +3,8 @@ import InfoBar from "./components/InfoBar";
 import MainHero from "./components/MainHero";
 import WelcomeBar from "./components/WelcomeBar"
 import ReviewsBar from "./components/ReviewsBar";
-
+import FeatServices from "./components/FeatServices";
+import CTA from "./components/CTA";
 export default function Home() {
   return (
     <div>
@@ -11,8 +12,9 @@ export default function Home() {
         
         <MainHero/>
         <WelcomeBar/>
-        <InfoBar/>
+        <FeatServices/>
         <ReviewsBar/>
+        <CTA/>
         
       </main>
     </div>
