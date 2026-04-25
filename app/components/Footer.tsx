@@ -1,44 +1,69 @@
 export default function Footer() {
   return (
-    <div className="flex justify-between py-14 px-16 bg-black">
+    <footer className="bg-black text-white">
 
-      <div>
-        <h2 className="mb-6 text-2xl font-bold tracking-wide text-white">Beau Blendz Shop</h2>
-        <p className="text-yellow-400 font-medium mb-1">(312) 500-5003</p>
-        <p className="text-gray-300 text-sm">149 West Chicago Avenue</p>
-        <p className="text-gray-300 text-sm">Chicago, Illinois</p>
+      {/* Main footer content */}
+      <div className="flex justify-between py-16 px-16 border-b border-neutral-800">
+
+        {/* Brand */}
+        <div className="max-w-xs">
+          <h2 className="text-2xl font-bold tracking-widest text-white uppercase mb-2">Beau Blendz</h2>
+          <p className="text-amber-600 text-xs tracking-widest uppercase mb-6">Indy's Premier Barbershop</p>
+          <p className="text-amber-500 font-medium mb-1">(312) 500-5003</p>
+          <p className="text-gray-400 text-sm">149 West Chicago Avenue</p>
+          <p className="text-gray-400 text-sm">Chicago, Illinois</p>
+        </div>
+
+        {/* Hours */}
+        <div>
+          <h3 className="text-xs tracking-widest uppercase text-amber-600 mb-6">Hours</h3>
+          <ul className="text-gray-400 text-sm space-y-2">
+            <li className="flex justify-between gap-8"><span>Sunday</span><span>9 AM – 7 PM</span></li>
+            <li className="flex justify-between gap-8"><span>Monday</span><span>9 AM – 8 PM</span></li>
+            <li className="flex justify-between gap-8"><span>Tuesday</span><span>9 AM – 8 PM</span></li>
+            <li className="flex justify-between gap-8"><span>Wednesday</span><span>9 AM – 8 PM</span></li>
+            <li className="flex justify-between gap-8"><span>Thursday</span><span>9 AM – 8 PM</span></li>
+            <li className="flex justify-between gap-8"><span>Friday</span><span>9 AM – 8 PM</span></li>
+            <li className="flex justify-between gap-8"><span>Saturday</span><span>9 AM – 7 PM</span></li>
+          </ul>
+        </div>
+
+        {/* Nav */}
+        <div>
+          <h3 className="text-xs tracking-widest uppercase text-amber-600 mb-6">Navigate</h3>
+          <ul className="space-y-3">
+            {["Home", "About Me", "Services", "Book Now"].map((link) => (
+              <li key={link}>
+                <a className="text-gray-400 hover:text-amber-600 transition-colors duration-150 text-sm tracking-widest uppercase cursor-pointer">
+                  {link}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Social */}
+        <div>
+          <h3 className="text-xs tracking-widest uppercase text-amber-600 mb-6">Follow</h3>
+          <ul className="space-y-3">
+            {["Facebook", "Instagram", "Gmail"].map((platform) => (
+              <li key={platform}>
+                <a className="text-gray-400 hover:text-amber-600 transition-colors duration-150 text-sm tracking-widest uppercase cursor-pointer">
+                  {platform}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
       </div>
 
-      <div className="flex flex-col items-center">
-        <h2 className="mb-6 text-2xl font-bold tracking-wide text-white">Hours</h2>
-        <ul className="text-gray-300 text-sm space-y-1 text-center">
-          <li>Sunday: 9 AM – 7 PM</li>
-          <li>Monday: 9 AM – 8 PM</li>
-          <li>Tuesday: 9 AM – 8 PM</li>
-          <li>Wednesday: 9 AM – 8 PM</li>
-          <li>Thursday: 9 AM – 8 PM</li>
-          <li>Friday: 9 AM – 8 PM</li>
-          <li>Saturday: 9 AM – 7 PM</li>
-        </ul>
+      {/* Bottom bar */}
+      <div className="flex justify-between items-center px-16 py-5">
+        <p className="text-gray-600 text-xs tracking-widest">© 2024 BEAU BLENDZ. ALL RIGHTS RESERVED.</p>
+        <p className="text-gray-600 text-xs tracking-widest">INDIANAPOLIS, IN</p>
       </div>
 
-      <div className="flex flex-col justify-center">
-        <ul className="text-xl space-y-2">
-          <li className="text-yellow-400 hover:text-white cursor-pointer transition-colors duration-150">Home</li>
-          <li className="text-yellow-400 hover:text-white cursor-pointer transition-colors duration-150">About Me</li>
-          <li className="text-yellow-400 hover:text-white cursor-pointer transition-colors duration-150">Services</li>
-          <li className="text-yellow-400 hover:text-white cursor-pointer transition-colors duration-150">Book Now</li>
-        </ul>
-      </div>
-
-      <div className="flex flex-col justify-center">
-        <ul className="text-lg space-y-2">
-          <li className="text-gray-300 hover:text-yellow-400 cursor-pointer transition-colors duration-150">Facebook</li>
-          <li className="text-gray-300 hover:text-yellow-400 cursor-pointer transition-colors duration-150">Instagram</li>
-          <li className="text-gray-300 hover:text-yellow-400 cursor-pointer transition-colors duration-150">Gmail</li>
-        </ul>
-      </div>
-
-    </div>
+    </footer>
   )
 }

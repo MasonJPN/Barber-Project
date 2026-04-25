@@ -6,7 +6,7 @@ export default function MeetBarber() {
   return (
     <section className="bg-neutral-100 w-full py-24 px-16">
 
-      {/* Header */}
+      
       <div className="text-center mb-16">
         <p className="text-amber-700 text-sm tracking-[0.3em] uppercase mb-2">Est. 2020</p>
         <h2 className="text-4xl font-bold tracking-widest text-neutral-900 uppercase underline underline-offset-8 decoration-amber-700">
@@ -14,15 +14,15 @@ export default function MeetBarber() {
         </h2>
       </div>
 
-      {/* Main two-column layout */}
+      
       <div className="flex gap-16 max-w-6xl mx-auto items-center">
 
-        {/* Left: Photo */}
-        <div className="w-1/2 flex-shrink-0">
+        
+        <div className="w-1/2 shrink-0">
           <img
-            src="/BeauPhoto.png"
+            src="/BeauCTA.png"
             alt="Beau"
-            className="w-full h-[600px] object-cover object-top"
+            className="w-full h-150 object-cover object-top"
           />
         </div>
 

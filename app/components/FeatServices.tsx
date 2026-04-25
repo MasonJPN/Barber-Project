@@ -48,11 +48,11 @@ export default function FeatServices() {
                   <span className="text-xl">{open === service.name ? "-" : "+"}</span>
                 </div>
 
-                {open === service.name && (
-                  <p className="text-white text-sm mt-3">
-                    {service.description}
-                  </p>
-                )}
+                
+                <div className={`transition-all duration-300 overflow-hidden ${open === service.name ? "max-h-20" : "max-h-0"}`}>
+                    <p className="text-white text-sm mt-3">{service.description}</p>
+                </div>
+              
               </li>
             ))}
           </ul>

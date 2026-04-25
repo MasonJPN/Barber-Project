@@ -8,15 +8,15 @@ export default function NavBar() {
         <img alt="beauBlendz logo" />
       </div>
 
-      <ul className="absolute left-1/2 -translate-x-1/2 flex flex-row gap-10 text-white text-sm">
-        <li><Link href="/">Home</Link></li>
-        <li><Link href="/about">About Me</Link></li>
-        <li><Link href="/services">Services</Link></li>
-        <li><Link href="/Contact">Contact</Link></li>
+      <ul className="absolute left-1/2 -translate-x-1/2 flex flex-row gap-5 text-lg text-white  ">
+        <li className="hover:text-amber-600"><Link href="/">HOME</Link></li>
+        <li className="hover:text-amber-600"><Link href="/About">ABOUT</Link></li>
+        <li className="hover:text-amber-600"><Link href="/servicesPage">SERVICES</Link></li>
+        <li className="hover:text-amber-600"><Link href="/Contact">CONTACT</Link></li>
       </ul>
 
       <div className="flex items-center">
-        <button className="w-36 h-10 text-base font-semibold rounded-full text-white bg-amber-500">
+        <button className="w-36 h-15 text-base font-semibold  text-white bg-amber-600">
           Book Now
         </button>
       </div>

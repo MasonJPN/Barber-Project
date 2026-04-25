@@ -4,13 +4,13 @@ export default function Map() {
 
       
       <div className="max-w-xs">
-        <h2 className="text-xl font-bold text-amber-700 uppercase underline leading-tight mb-4">
+        <h2 className="text-xl font-bold text-amber-600 uppercase underline leading-tight mb-4">
           149 W Chicago Ave,<br />Chicago, IL 60654
         </h2>
         <p className="text-sm mb-6">
           Our barber shop is located on Chicago Ave. near La Salle St. conveniently located between the River North and Gold Coast neighborhoods.
         </p>
-        <button className="bg-amber-700 text-white text-sm px-6 py-3">
+        <button className="bg-amber-600 text-white text-sm px-6 py-3">
           Get Directions
         </button>
       </div>

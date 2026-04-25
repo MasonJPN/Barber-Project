@@ -1,6 +1,6 @@
 export default function MainHero() {
   return (
-    <div className="relative w-screen h-screen">
+    <div className="relative w-screen h-180">
       
       <img
         src="/DefaultHero.png"
@@ -8,11 +8,11 @@ export default function MainHero() {
         className="absolute inset-0 w-full h-full object-cover"
       />
 
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute  inset-0 bg-black/50" />
 
-      <div className="absolute bottom-10 left-10 text-white max-w-lg">
+      <div className="absolute flex flex-col justify-center items-center text-white max-w-lg">
         <h1 className="text-5xl font-semibold mb-4">Look your best.</h1>
-        <p className="text-sm text-gray-300 leading-relaxed mb-6">
+        <p className="text-lg text-gray-300 leading-relaxed mb-6">
           Highly skilled barbers. Modern and classic styling for men. Located in downtown Chicago.
         </p>
         <button className="bg-amber-500 text-white text-sm font-semibold px-6 py-3 rounded-full">
