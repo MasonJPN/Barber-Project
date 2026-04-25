@@ -26,7 +26,7 @@ export default function ReviewsBar() {
           <p className="text-sm leading-relaxed mb-4">
             "I've been to a lot of barbershops over the years, but Beau really stands out from the rest, super detail-oriented, patient, and consistent. You can tell he actually cares about his work."
           </p>
-          <p className="font-bold">- Mason F.</p>
+          <p className="font-bold">- Jordan C.</p>
         </div>
 
       </div>
